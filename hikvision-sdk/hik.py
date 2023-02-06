@@ -127,13 +127,13 @@ sensor_name_dimiss = "sensor."  + config["sensor_dismiss"]
 HCNetSDK.NET_DVR_Init()
 HCNetSDK.NET_DVR_SetValidIP(0, True)
 
-device_info = NET_DVR_DEVICEINFO_V30()
-user_id = HCNetSDK.NET_DVR_Login_V30(config["ip"].encode('utf-8'), 8000, config["username"].encode('utf-8'), config["password"].encode('utf-8'), device_info)
+#device_info = NET_DVR_DEVICEINFO_V30()
+#user_id = HCNetSDK.NET_DVR_Login_V30(config["ip"].encode('utf-8'), 8000, config["username"].encode('utf-8'), config["password"].encode('utf-8'), device_info)
 
 # fix for segmentation faults, remove device info:
 
-#device_info = NET_DVR_DEVICEINFO_V30()
-#user_id = HCNetSDK.NET_DVR_Login_V30(config["ip"].encode('utf-8'), 8000, config["username"].encode('utf-8'), config["password"].encode('utf-8'))
+device_info = NET_DVR_DEVICEINFO_V30()
+user_id = HCNetSDK.NET_DVR_Login_V30(config["ip"].encode('utf-8'), 8000, config["username"].encode('utf-8'), config["password"].encode('utf-8'))
 
 
 
